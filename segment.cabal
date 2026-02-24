@@ -1,0 +1,29 @@
+cabal-version:      3.0
+name:               segment
+version:            0.1.0.0
+license:            BSD-3-Clause
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable prepare
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.3.0,
+        split,
+        containers
+    hs-source-dirs:   prepare
+    default-language: GHC2021
+
+executable segment
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.3.0,
+        split,
+        containers,
+        array
+    hs-source-dirs:   segment
+    default-language: GHC2021
